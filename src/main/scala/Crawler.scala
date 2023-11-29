@@ -32,10 +32,10 @@ object Crawler {
       val newsObjects = newsArray.value.map { newsItem =>
         val quelle = "Tagesschau"
         val title = (newsItem \ "title").as[String]
-        val text = extractText((newsItem \ "detailsweb").asOpt[String].getOrElse("Missing"))
-        val kategorie = (newsItem \ "topline").asOpt[String].getOrElse("Missing")
+        val text = extractText((newsItem \ "detailsweb").asOpt[String].getOrElse(""))
+        val kategorie = (newsItem \ "topline").asOpt[String].getOrElse("")
         val date = (newsItem \ "date").as[String]
-        val url = (newsItem \ "detailsweb").asOpt[String].getOrElse("Missing")
+        val url = (newsItem \ "detailsweb").asOpt[String].getOrElse("")
 
         TagesschauData(quelle, title, text, kategorie, date, url)
       }
@@ -50,8 +50,8 @@ object Crawler {
   }
 
   def extractText(url: String): String = {
-    val defaultString = "could not find articleBody"
-    if (url == "Missing") defaultString
+    val defaultString = ""
+    if (url == "") defaultString
     else {
       val doc = Jsoup.connect(url).get()
       val scriptElement = doc.select("script[type=application/ld+json]").first()
