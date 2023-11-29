@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="049bc7a0-77c3-4575-bb72-a0da2980656d" name="Changes" comment="added ex">
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/logs/Log_File" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +46,16 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Application.Mongo">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Crawler" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Crawler" />
+      <module name="TageschauCrawler" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="TageschauCrawler" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -75,6 +83,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Mongo" />
         <item itemvalue="Application.Crawler" />
       </list>
@@ -91,7 +100,7 @@
       <workItem from="1699013287740" duration="7741000" />
       <workItem from="1699738269000" duration="1937000" />
       <workItem from="1701254448695" duration="84000" />
-      <workItem from="1701254534755" duration="1009000" />
+      <workItem from="1701254534755" duration="4093000" />
     </task>
     <task id="LOCAL-00001" summary="added textBody extraction and expanded Datamodel">
       <created>1699610230924</created>
@@ -114,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701255460582</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added ex">
+      <created>1701255572916</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701255572916</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
