@@ -50,8 +50,8 @@ object Crawler {
   }
 
   def extractText(url: String): String = {
-    val defaultString = "could not find articleBody"
-    if (url == "Missing") defaultString
+    val defaultString = ""
+    if (url == "") defaultString
     else {
       val doc = Jsoup.connect(url).get()
       val scriptElement = doc.select("script[type=application/ld+json]").first()

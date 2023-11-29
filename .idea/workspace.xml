@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="049bc7a0-77c3-4575-bb72-a0da2980656d" name="Changes" comment="addid gitignore">
+    <list default="true" id="049bc7a0-77c3-4575-bb72-a0da2980656d" name="Changes" comment="Crawler writes an empty string instead of Missing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/logs/Log_File" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/logs/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logs/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Crawler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Crawler.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,8 +90,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Mongo" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Mongo" />
         <item itemvalue="Application.Crawler" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Mongo" />
@@ -110,7 +109,7 @@
       <workItem from="1699013287740" duration="7741000" />
       <workItem from="1699738269000" duration="1937000" />
       <workItem from="1701254448695" duration="84000" />
-      <workItem from="1701254534755" duration="4675000" />
+      <workItem from="1701254534755" duration="6229000" />
     </task>
     <task id="LOCAL-00001" summary="added textBody extraction and expanded Datamodel">
       <created>1699610230924</created>
@@ -147,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701259994942</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Crawler writes an empty string instead of Missing">
+      <created>1701260371419</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701260371419</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +174,8 @@
     <MESSAGE value="added textBody extraction and expanded Datamodel" />
     <MESSAGE value="added ex" />
     <MESSAGE value="addid gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="addid gitignore" />
+    <MESSAGE value="Crawler writes an empty string instead of Missing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crawler writes an empty string instead of Missing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
