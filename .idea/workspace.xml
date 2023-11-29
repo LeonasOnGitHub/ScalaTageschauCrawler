@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="049bc7a0-77c3-4575-bb72-a0da2980656d" name="Changes" comment="sdk 11">
-      <change afterPath="$PROJECT_DIR$/src/main/logs/Log_File" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/logs/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ConfigLoader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ConfigLoader.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Mongo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Mongo.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ConfigLoader$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/ConfigLoader$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Mongo$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Mongo$delayedInit$body.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Mongo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/Mongo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +114,7 @@
       <workItem from="1700652374829" duration="7846000" />
       <workItem from="1701078691953" duration="2873000" />
       <workItem from="1701201795809" duration="6624000" />
+      <workItem from="1701252726831" duration="750000" />
     </task>
     <task id="LOCAL-00001" summary="added textBody extraction and expanded Datamodel">
       <created>1699610230924</created>

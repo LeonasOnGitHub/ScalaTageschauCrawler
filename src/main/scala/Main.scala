@@ -26,7 +26,7 @@ object Main extends App {
   // Crawler starten und ergebnis überprüfen
   val jsVal = Crawler.getTagesschauNewsPageApi("https://tagesschau.de/api2/news/")
   if (jsVal == JsNull || jsVal.toString == "{}") {
-    logger.error("Crawler couldn't find any Data")
+    logger.error("Crawler couldn't find any Data!")
   }
 
   // JsValue in ein JsArray umwandeln
