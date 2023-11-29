@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="049bc7a0-77c3-4575-bb72-a0da2980656d" name="Changes" comment="added ex">
+    <list default="true" id="049bc7a0-77c3-4575-bb72-a0da2980656d" name="Changes" comment="addid gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/logs/Log_File" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/logs/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logs/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Crawler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Crawler.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +24,11 @@
     </projectState>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Edit_crawler_branch" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -45,6 +52,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Crawler" type="Application" factoryName="Application" temporary="true">
@@ -83,9 +91,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Mongo" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Crawler" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Mongo" />
-        <item itemvalue="Application.Crawler" />
       </list>
     </recent_temporary>
   </component>
@@ -100,7 +110,7 @@
       <workItem from="1699013287740" duration="7741000" />
       <workItem from="1699738269000" duration="1937000" />
       <workItem from="1701254448695" duration="84000" />
-      <workItem from="1701254534755" duration="4093000" />
+      <workItem from="1701254534755" duration="4675000" />
     </task>
     <task id="LOCAL-00001" summary="added textBody extraction and expanded Datamodel">
       <created>1699610230924</created>
@@ -130,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701255572916</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="addid gitignore">
+      <created>1701259994942</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701259994942</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +167,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added textBody extraction and expanded Datamodel" />
     <MESSAGE value="added ex" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ex" />
+    <MESSAGE value="addid gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="addid gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
