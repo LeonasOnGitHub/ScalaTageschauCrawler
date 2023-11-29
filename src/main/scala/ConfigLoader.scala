@@ -1,5 +1,3 @@
-
-
 import com.typesafe.config.ConfigFactory
 
 object ConfigLoader {
