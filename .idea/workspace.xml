@@ -7,7 +7,8 @@
     <list default="true" id="049bc7a0-77c3-4575-bb72-a0da2980656d" name="Changes" comment="Crawler writes an empty string instead of Missing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/logs/Log_File" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Crawler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Crawler.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Crawler$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/Crawler$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/Main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/Main$.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +111,7 @@
       <workItem from="1699738269000" duration="1937000" />
       <workItem from="1701254448695" duration="84000" />
       <workItem from="1701254534755" duration="6229000" />
+      <workItem from="1701616446777" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="added textBody extraction and expanded Datamodel">
       <created>1699610230924</created>
