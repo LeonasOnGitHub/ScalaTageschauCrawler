@@ -2,4 +2,4 @@
 src/main/resources
 .bsp
 taget
-src/main/logs/log_file.txt
+src/main/logs/log_file.log

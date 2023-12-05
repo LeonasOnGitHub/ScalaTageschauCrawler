@@ -22,7 +22,7 @@ class Mongo {
       mongoClient.getDatabase(db)
     } catch {
       case e: Exception =>
-        logger.error("an exception occurred while trying to connect to MongoClient: ", e)
+        logger.error("an exception occurred while trying to connect to the Database: ", e)
         //TODO \|/ keine leere db senden
         mongoClient.getDatabase("")
     }
