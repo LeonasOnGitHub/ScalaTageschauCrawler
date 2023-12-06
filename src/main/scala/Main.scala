@@ -25,7 +25,7 @@ object Main extends App {
 
   // Crawler starten und ergebnis überprüfen
   val jsVal = Crawler.getTagesschauNewsPageApi("https://tagesschau.de/api2/news/")
-  if (jsVal == JsNull || jsVal.toString == "{}") {
+  if (jsVal != JsNull || jsVal.toString == "{}") {
     logger.error("Crawler couldn't find any Data!")
   }
 
@@ -70,8 +70,8 @@ object Main extends App {
       }
     }
   )
-  println("Inserted articles: " + insertedDocs)
-  println("Articles already in database: " + docAlreadyInDB)
+  logger.info("Inserted articles: " + insertedDocs)
+  logger.info("Articles already in database: " + docAlreadyInDB)
 
   // Schließe die Verbindung zur MongoDB
   mongoClient.close()
