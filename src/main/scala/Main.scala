@@ -3,7 +3,7 @@
 import org.mongodb.scala._
 import org.mongodb.scala.bson.BsonDocument
 import org.mongodb.scala.model.Filters._
-import org.slf4j.{Logger, LoggerFactory}
+import org.slf4j.LoggerFactory
 import play.api.libs.json._
 
 import scala.concurrent.Await
@@ -15,7 +15,7 @@ object Main extends App {
   val dbObject = new Mongo()
 
   //Exeption Logger
-  val logger: Logger = LoggerFactory.getLogger(getClass)
+  val logger = LoggerFactory.getLogger(getClass)
 
   // MongoDB-Verbindungsdaten
   var mongoClient = dbObject.getMongoClient(connectionString)
@@ -32,8 +32,9 @@ object Main extends App {
   // JsValue in ein JsArray umwandeln
   val jsonArray: JsResult[JsArray] = jsVal.validate[JsArray]
 
-  var insertedDocs=0
-  var docAlreadyInDB=0
+  var docWithNoText = 0
+  var insertedDocs = 0
+  var docAlreadyInDB = 0
   // Überprüfen, ob die Validierung erfolgreich war
   jsonArray.fold(
     errors => {
@@ -48,6 +49,7 @@ object Main extends App {
         val bsonDocument: BsonDocument = BsonDocument.apply(Json.stringify(jsEntry))
         val title = bsonDocument.get("title")
         val date = bsonDocument.get("date")
+        val url = bsonDocument.get("url")
         val existingDocumentObservable = collection.find(
           and(
             equal("title", title),
@@ -56,22 +58,33 @@ object Main extends App {
         ).limit(1)
         val existingDocument = Await.result(existingDocumentObservable.toFuture(), Duration.Inf)
 
-        // falls das Dokument  noch nicht in der Collection vorhanden ist, füge es hinzu
-        if (existingDocument.isEmpty) {
-          //Schreibe den eintrag in die Datenbank
-          val insertObservable = collection.insertOne(bsonDocument)
-          Await.result(insertObservable.toFuture(), Duration.Inf)
+        // checken ob das dokument einen Text hat
+        if (url.asString() != "") {
 
-          insertedDocs+=1
+          // falls das Dokument  noch nicht in der Collection vorhanden ist, füge es hinzu
+          if (existingDocument.isEmpty) {
+            //Schreibe den eintrag in die Datenbank
+            try {
+              val insertObservable = collection.insertOne(bsonDocument)
+              Await.result(insertObservable.toFuture(), Duration.Inf)
+            } catch {
+              case e: Exception =>
+                logger.error("an exception occurred while trying to insert into MongoDB: ", e)
+            }
+            insertedDocs += 1
+          } else {
+            docAlreadyInDB += 1
+          }
+
         } else {
-          docAlreadyInDB+=1
+          docWithNoText += 1
         }
-
       }
     }
   )
   logger.info("Inserted articles: " + insertedDocs)
   logger.info("Articles already in database: " + docAlreadyInDB)
+  logger.info("Articles with no text body: " + docWithNoText)
 
   // Schließe die Verbindung zur MongoDB
   mongoClient.close()

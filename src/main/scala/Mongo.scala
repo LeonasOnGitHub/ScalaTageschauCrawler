@@ -4,7 +4,7 @@ import org.slf4j.{Logger, LoggerFactory}
 class Mongo {
 
   //Exeption Logger
-  val logger: Logger = LoggerFactory.getLogger(getClass)
+  val logger= LoggerFactory.getLogger(getClass)
 
   def getMongoClient(connectionString: String): MongoClient = {
     try {

@@ -13,17 +13,6 @@ object Crawler {
   implicit val tagesschauDataWrites: Writes[TagesschauData] = Json.writes[TagesschauData]
   val ENTRYURL = "https://tagesschau.de/api2/news/"
 
-  def main(args: Array[String]): Unit = {
-    // Send a GET request and parse the JSON response
-    print(
-      Json.stringify(
-        getTagesschauNewsPageApi(ENTRYURL)
-      )
-    )
-    //get relevant data from Json object
-
-  }
-
   def getTagesschauNewsPageApi(entryUrl: String): JsValue = {
     logger.info("Crawler started")
     val response: requests.Response = requests.get(entryUrl)
