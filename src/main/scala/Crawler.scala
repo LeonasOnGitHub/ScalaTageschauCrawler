@@ -38,6 +38,7 @@ object Crawler {
       Json.toJson(newsObjects)
 
     } else {
+      logger.error("No news data found in the JSON response.")
       throw new Exception("No news data found in the JSON response.")
     }
 
@@ -49,10 +50,17 @@ object Crawler {
     else {
       val doc = Jsoup.connect(url).get()
       val scriptElement = doc.select("script[type=application/ld+json]").first()
-      val scriptContent = scriptElement.html()
-      val json: JsValue = Json.parse(scriptContent)
-      val articleBody: Option[String] = (json \ "articleBody").asOpt[String]
-      articleBody.getOrElse(defaultString)
+      try{
+        val scriptContent = scriptElement.html()
+        val json: JsValue = Json.parse(scriptContent)
+        val articleBody: Option[String] = (json \ "articleBody").asOpt[String]
+        articleBody.getOrElse(defaultString)
+      } catch {
+        case e: Exception =>
+          logger.error("Error while reading text body: " + e)
+          defaultString
+      }
+
     }
 
   }
