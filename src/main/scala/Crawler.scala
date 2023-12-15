@@ -1,5 +1,5 @@
 
-import Main.getClass
+import Main.{getClass, jsVal}
 import org.jsoup.Jsoup
 import org.slf4j.{Logger, LoggerFactory}
 import play.api.libs.json.{JsArray, JsValue, Json, Writes}

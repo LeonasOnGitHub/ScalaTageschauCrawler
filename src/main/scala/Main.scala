@@ -59,7 +59,7 @@ object Main extends App {
         val existingDocument = Await.result(existingDocumentObservable.toFuture(), Duration.Inf)
 
         // checken ob das dokument einen Text hat
-        if (url.asString() != "") {
+        if (url.asString() != null && url.asString().getValue().isEmpty()) {
 
           // falls das Dokument  noch nicht in der Collection vorhanden ist, füge es hinzu
           if (existingDocument.isEmpty) {
