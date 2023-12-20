@@ -1,5 +1,5 @@
-.idea
+.idea/
 src/main/resources
-.bsp
-taget
+.bsp/
+taget/
 src/main/logs/log_file.log
