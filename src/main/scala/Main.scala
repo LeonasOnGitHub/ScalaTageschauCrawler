@@ -20,7 +20,7 @@ object Main extends App {
   // MongoDB-Verbindungsdaten
   var mongoClient = dbObject.getMongoClient(connectionString)
   val database = dbObject.getDatabase(mongoClient, "Projektstudium")
-  val collection: MongoCollection[BsonDocument] = database.getCollection("tagesschau_raw_data")
+  val collection: MongoCollection[BsonDocument] = database.getCollection("tagesschau_test_data")
 
 
   // Crawler starten und ergebnis überprüfen
@@ -50,6 +50,7 @@ object Main extends App {
         val title = bsonDocument.get("title")
         val date = bsonDocument.get("date")
         val url = bsonDocument.get("url")
+        val text = bsonDocument.get("text")
         val existingDocumentObservable = collection.find(
           and(
             equal("title", title),
@@ -59,7 +60,7 @@ object Main extends App {
         val existingDocument = Await.result(existingDocumentObservable.toFuture(), Duration.Inf)
 
         // checken ob das dokument einen Text hat
-        if (url.asString() != null && url.asString().getValue().isEmpty()) {
+        if (text.asString() != null && url.asString().getValue.nonEmpty) {
 
           // falls das Dokument  noch nicht in der Collection vorhanden ist, füge es hinzu
           if (existingDocument.isEmpty) {

@@ -4,9 +4,13 @@ import org.jsoup.Jsoup
 import org.slf4j.{Logger, LoggerFactory}
 import play.api.libs.json.{JsArray, JsValue, Json, Writes}
 
+import java.text.SimpleDateFormat
+import java.util.Date
+
 case class TagesschauData(source: String, title: String, text: String, category: String, date: String, url: String)
 
 object Crawler {
+  val dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
 
   val logger: Logger = LoggerFactory.getLogger(getClass)
   // Define an implicit Writes for TagesschauData
@@ -28,6 +32,7 @@ object Crawler {
         val title = (newsItem \ "title").as[String]
         val text = extractText((newsItem \ "detailsweb").asOpt[String].getOrElse(""))
         val kategorie = (newsItem \ "topline").asOpt[String].getOrElse("")
+        //val date = dateFormat.parse((newsItem \ "date").as[String])
         val date = (newsItem \ "date").as[String]
         val url = (newsItem \ "detailsweb").asOpt[String].getOrElse("")
 
