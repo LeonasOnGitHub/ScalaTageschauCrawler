@@ -19,8 +19,8 @@ object Main extends App {
 
   // MongoDB-Verbindungsdaten
   var mongoClient = dbObject.getMongoClient(connectionString)
-  val database = dbObject.getDatabase(mongoClient, "Projektstudium")
-  val collection: MongoCollection[BsonDocument] = database.getCollection("tagesschau_test_data")
+  val database = dbObject.getDatabase(mongoClient, "Tagesschau")
+  val collection: MongoCollection[BsonDocument] = database.getCollection("tagesschau_raw_data")
 
 
   // Crawler starten und ergebnis überprüfen
